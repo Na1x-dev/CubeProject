@@ -1,4 +1,5 @@
 * {
+    font-family: "Montserrat", sans-serif;
     font-size: 100%;
     border: 0 none;
     padding: 0;
@@ -7,26 +8,157 @@
     font-weight: 400;
     font-style: normal;
     background-color: white;
+    user-select: none;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: "Questrial";
+    src: url("../fonts/Questrial-Regular.ttf");
 }
 
 .container{
     display: grid;
     grid-template-columns: 1fr 3fr;
+    column-gap: 8px;
     width: auto;
-    margin: auto 80px auto 80px;
+    margin: auto calc((100vw*80)/1440) auto calc((100vw*80)/1440);
+}
+
+.logo-container{
+    height: calc((100vw*192)/1440);
+    width: calc((100vw*192)/1440);
+}
+
+.logo-img{
+    width: calc((100vw*192)/1440);
+    height: auto;
 }
 
 .header-container{
-    margin-top:65px;
+    margin-top:calc((100vw*65)/1440);
+    margin-bottom: calc((100vw*75)/1440);
 }
 
 .header-content-container{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .header-top-line{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.language-switcher-button{
+    font-size: 20px;
+}
+
+.language-button-ru{
+    text-decoration:underline;
+}
+
+.burger-button{
+    display: flex;
+    flex-direction: column;
+    height: 32px;
+    justify-content: space-evenly;
+}
+
+.burger-button-line{
+    width: calc((100vw*61)/1440);
+    border: 3px #000 solid;
+    background-color: black;
+}
+
+.main-header{
+    font-family: "Questrial", sans-serif;
+    font-size: 96px;
+}
+
+.pres-section{
+    margin-bottom: calc((100vw*95)/1440);
+}
+
+.short-desc-and-slider{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: calc((100vw*40)/1440);
+    text-transform: uppercase;
+    line-height: 34px;
+}
+
+.pres-short-description{
+    font-size: 20px;
+    line-height: 34px;
+}
+
+.pres-slider{
+    display: flex;
+    flex-direction: column;
+    width: 87px;
+}
+
+.pres-slider-num{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #000;
+}
+
+.pres-slider-body{
+    width: 79px;
+    height: 3px;
+    background-color: #b0b0b0;
+    align-self: center;
+}
+
+.pres-slider-indicator{
+    width: 20px;
+    height: 3px;
+    background-color: #000;
+}
+
+.pres-interrier{
+    width: 100%;
+    height: auto;
+}
+
+.pres-description-container{
+    /* margin-top: calc((100vw*95)/1440); */
+    margin-top: 95px;
+}
+
+.pres-slogan{
+    font-size: 20px;
+    color: #838383;
+    width: 100px;
+    margin-bottom: 70px;
+    line-height: 24.38px;
+}
+
+.pres-pre-description{
+    font-size: 25px;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    width: 556px;
+    margin-bottom: 40px;
+    line-height: 38.98px;
+}
+
+.pres-description{
+    line-height: 36px;
+    font-size: 20px;
+    text-align: justify;
+  
 }
