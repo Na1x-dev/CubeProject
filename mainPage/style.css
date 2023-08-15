@@ -21,7 +21,7 @@
     src: url("../fonts/Questrial-Regular.ttf");
 }
 
-.container{
+.container {
     display: grid;
     grid-template-columns: 1fr 3fr;
     column-gap: 8px;
@@ -29,53 +29,53 @@
     margin: auto calc((100vw*80)/1440) auto calc((100vw*80)/1440);
 }
 
-.logo-container{
+.logo-container {
     height: calc((100vw*192)/1440);
     width: calc((100vw*192)/1440);
 }
 
-.logo-img{
+.logo-img {
     width: calc((100vw*192)/1440);
     height: auto;
 }
 
-.header-container{
-    margin-top:calc((100vw*65)/1440);
+.header-container {
+    margin-top: calc((100vw*65)/1440);
     margin-bottom: calc((100vw*75)/1440);
 }
 
-.header-content-container{
+.header-content-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.header-top-line{
+.header-top-line {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.language-switcher-button{
+.language-switcher-button {
     font-size: 20px;
 }
 
-.language-button-ru{
-    text-decoration:underline;
+.language-button-ru {
+    text-decoration: underline;
 }
 
-.burger-button:hover{
-cursor: pointer;
+.burger-button:hover {
+    cursor: pointer;
 }
 
-.burger-button{
+.burger-button {
     display: flex;
     flex-direction: column;
     height: 32px;
     justify-content: space-evenly;
 }
 
-.burger-button-line{
+.burger-button-line {
     width: calc((100vw*61)/1440);
     border: 3px #000 solid;
     background-color: black;
@@ -110,45 +110,115 @@ cursor: pointer;
     width: 100vw;
     margin: 0;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: start;
     z-index: 9;
 }
 
+.burger-menu-main-part {
+    background-color: #1a1a1a;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.burger-menu-list {
+    background-color: #1a1a1a;
+    margin-left: calc((100vw*56)/1440);
+    margin-top: calc((100vw*75)/1440);
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
 .burger-menu-link {
+    color: #fff;
+    background-color: #1a1a1a;
+    font-size: 96px;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 67px;
+    transition-duration: 0.2s;
+    text-stroke: 1px #fff;
+    -webkit-text-stroke: 1px #fff;
+}
+
+.burger-menu-link:hover {
+    color: #000;
+    -webkit-text-stroke: 1px #fff;
+    text-stroke: 1px #fff;
 
 }
 
-.burger-menu-link-container {
-
+.burger-close-button {
+    width: 60px;
+    height: 60px;
+    background-color: #1a1a1a;
+    margin-top: 30px;
 }
 
-.burger-menu-active-link {
-   
+.burger-close-figure {
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(1% 0, 50% 49%, 99% 0, 100% 1%, 51% 50%, 100% 99%, 99% 100%, 50% 51%, 1% 100%, 0 99%, 49% 50%, 0 1%);
+    background-color: #fff;
+    transition-duration: 0.2s;
 }
 
-.burger-logo-container{
+.burger-close-button:hover .burger-close-figure {
+    clip-path: polygon(2% 0, 50% 48%, 98% 0, 100% 2%, 52% 50%, 100% 98%, 98% 100%, 50% 52%, 2% 100%, 0 98%, 48% 50%, 0 2%);
+}
+
+.burger-close-button:hover {
+    cursor: pointer;
+}
+
+.burger-logo-container {
     width: calc((100vw*558)/1440);
     height: calc((100vw*558)/1440);
-    
 }
 
-.burger-logo-img{
+.burger-logo-img {
     width: 100%;
     height: 100%;
 }
 
-.main-header{
+.burger-email-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #1a1a1a;
+    margin-top: 30px;
+}
+
+.burger-email {
+    margin-right: 30px;
+    align-self: flex-end;
+    font-weight: 600;
+    font-size: 34px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #1a1a1a;
+}
+
+.burger-underline {
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.main-header {
     font-family: "Questrial", sans-serif;
     font-size: 96px;
 }
 
-.pres-section{
+.pres-section {
     margin-bottom: calc((100vw*95)/1440);
 }
 
-.short-desc-and-slider{
+.short-desc-and-slider {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -157,18 +227,18 @@ cursor: pointer;
     line-height: 34px;
 }
 
-.pres-short-description{
+.pres-short-description {
     font-size: 20px;
     line-height: 34px;
 }
 
-.pres-slider{
+.pres-slider {
     display: flex;
     flex-direction: column;
     width: 87px;
 }
 
-.pres-slider-num{
+.pres-slider-num {
     display: flex;
     flex-direction: row;
     list-style-type: none;
@@ -177,30 +247,30 @@ cursor: pointer;
     color: #000;
 }
 
-.pres-slider-body{
+.pres-slider-body {
     width: 79px;
     height: 3px;
     background-color: #b0b0b0;
     align-self: center;
 }
 
-.pres-slider-indicator{
+.pres-slider-indicator {
     width: 20px;
     height: 3px;
     background-color: #000;
 }
 
-.pres-interrier{
+.pres-interrier {
     width: 100%;
     height: auto;
 }
 
-.pres-description-container{
+.pres-description-container {
     /* margin-top: calc((100vw*95)/1440); */
     margin-top: 95px;
 }
 
-.pres-slogan{
+.pres-slogan {
     font-size: 20px;
     color: #838383;
     width: 100px;
@@ -208,7 +278,7 @@ cursor: pointer;
     line-height: 24.38px;
 }
 
-.pres-pre-description{
+.pres-pre-description {
     font-size: 25px;
     color: #000;
     text-transform: uppercase;
@@ -218,9 +288,9 @@ cursor: pointer;
     line-height: 38.98px;
 }
 
-.pres-description{
+.pres-description {
     line-height: 36px;
     font-size: 20px;
     text-align: justify;
-  
+
 }
