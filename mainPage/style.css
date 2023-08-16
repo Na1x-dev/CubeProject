@@ -7,7 +7,7 @@
     position: static;
     font-weight: 400;
     font-style: normal;
-    background-color: white;
+    /* background-color: white; */
     user-select: none;
 }
 
@@ -80,23 +80,6 @@
     border: 3px #000 solid;
     background-color: black;
 }
-
-/* .burger-label {
-    margin: auto 0;
-    z-index: 99;
-} */
-
-/* .burger-button {
-    position: relative;
-    height: 22px;
-    width: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: auto 0;
-    transition-duration: 0.5s;
-    z-index: 99;
-} */
 
 .burger-menu {
     transition-duration: 0.5s;
@@ -293,4 +276,111 @@
     font-size: 20px;
     text-align: justify;
 
+}
+
+.projects-section{
+    background-color: #000;
+    padding-top: 69px;
+}
+
+.projects-container{
+    margin: auto calc((100vw*80)/1440) auto calc((100vw*80)/1440);
+  
+}
+
+.projects-header{
+    font-size: 24px;
+    color: #D8D8D8;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 35px;
+}
+
+.upper-projects{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.project-card-img{
+  transition-duration: 0.2s;
+}
+
+.project-card-img:hover{
+  background-color: #1a1a1a;
+  cursor: pointer;
+}
+
+.residence-project-img{
+    margin-top: 110px;
+    width: calc((100vw*520.5)/1440);
+}
+.villa-project-img{
+    width: calc((100vw*699.5)/1440);
+}
+
+.bottom-projects{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.interrier-project-img{
+    margin-top: 145px;
+    width: calc((100vw*609.5)/1440);
+    margin-bottom: 104px;
+}
+
+.projects-additional-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.landscape-project-img{
+    width: calc((100vw*548)/1440);
+}
+
+.all-projects-button{
+    display: flex;
+    flex-direction: column;
+    color: #D8D8D8;
+    font-size: 24px;
+    line-height: 35px;
+    text-transform: uppercase;
+    margin-bottom: 103px;
+    width: auto;
+    align-self: flex-end;
+    transition-duration: 0.2s;
+}
+
+.button-text-and-arrow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.all-projects-button-arrow{
+    clip-path: polygon(5% 0, 94% 90%, 94% 50%, 100% 50%, 100% 100%, 50% 100%, 50% 94%, 90% 94%, 0 5%);
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;   
+}
+
+.all-projects-button-underline{
+    height: 1px;
+    background-color: #fff;
+    width: 100%;
+    transition-duration: 0.1s;
+}
+
+.all-projects-button:hover{
+ cursor: pointer;   
+ background-color: #1a1a1a;
+}
+
+
+.all-projects-button:hover .all-projects-button-underline{
+    height: 3px;
 }
