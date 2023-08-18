@@ -278,17 +278,17 @@
 
 }
 
-.projects-section{
+.projects-section {
     background-color: #000;
     padding-top: 69px;
 }
 
-.projects-container{
+.projects-container {
     margin: auto calc((100vw*80)/1440) auto calc((100vw*80)/1440);
-  
+
 }
 
-.projects-header{
+.projects-header {
     font-size: 24px;
     color: #D8D8D8;
     font-weight: 400;
@@ -296,52 +296,53 @@
     line-height: 35px;
 }
 
-.upper-projects{
+.upper-projects {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.project-card-img{
-  transition-duration: 0.2s;
+.project-card-img {
+    transition-duration: 0.2s;
 }
 
-.project-card-img:hover{
-  background-color: #1a1a1a;
-  cursor: pointer;
+.project-card-img:hover {
+    background-color: #1a1a1a;
+    cursor: pointer;
 }
 
-.residence-project-img{
+.residence-project-img {
     margin-top: 110px;
     width: calc((100vw*520.5)/1440);
 }
-.villa-project-img{
+
+.villa-project-img {
     width: calc((100vw*699.5)/1440);
 }
 
-.bottom-projects{
+.bottom-projects {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.interrier-project-img{
+.interrier-project-img {
     margin-top: 145px;
     width: calc((100vw*609.5)/1440);
     margin-bottom: 104px;
 }
 
-.projects-additional-container{
+.projects-additional-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.landscape-project-img{
+.landscape-project-img {
     width: calc((100vw*548)/1440);
 }
 
-.all-projects-button{
+.all-projects-button {
     display: flex;
     flex-direction: column;
     color: #D8D8D8;
@@ -354,33 +355,128 @@
     transition-duration: 0.2s;
 }
 
-.button-text-and-arrow{
+.button-text-and-arrow {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.all-projects-button-arrow{
+.all-projects-button-arrow {
     clip-path: polygon(5% 0, 94% 90%, 94% 50%, 100% 50%, 100% 100%, 50% 100%, 50% 94%, 90% 94%, 0 5%);
     background-color: #fff;
     width: 20px;
     height: 20px;
-    margin-left: 5px;   
+    margin-left: 5px;
 }
 
-.all-projects-button-underline{
+.all-projects-button-underline {
     height: 1px;
     background-color: #fff;
     width: 100%;
     transition-duration: 0.1s;
 }
 
-.all-projects-button:hover{
- cursor: pointer;   
- background-color: #1a1a1a;
+.all-projects-button:hover {
+    cursor: pointer;
+    background-color: #1a1a1a;
 }
 
 
-.all-projects-button:hover .all-projects-button-underline{
+.all-projects-button:hover .all-projects-button-underline {
     height: 3px;
+}
+
+
+.about-header {
+    color: #838383;
+    font-size: 20px;
+    margin-top: calc((100vw*95)/1440);
+}
+
+.about-pre-description {
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 600;
+    margin-top: calc((100vw*70)/1440);
+}
+
+.about-main-interrior {
+    width: calc((100vw*954)/1440);
+    height: auto;
+    margin-top: calc((100vw*40)/1440);
+}
+
+.about-description {
+    font-size: 24px;
+    line-height: 36px;
+    margin-top: 60px;
+}
+
+.about-accordion{
+    margin-top: calc((100vw*40)/1440);
+}
+
+.about-accordion-list-part {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-accordion-heading-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.about-accordion-heading-text {
+    color: #000;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.about-accordion-heading-icon {
+    height: 24px;
+    width: 24px;
+    background-color: #B0B0B0;
+    clip-path: polygon(0 48%, 48% 48%, 48% 0, 52% 0, 52% 48%, 100% 48%, 100% 52%, 52% 52%, 52% 100%, 48% 100%, 48% 52%, 0 52%);
+}
+
+.about-accordion-content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-accordion-text-content{
+    color: #000;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.about-accordion-image-content{
+    width: calc((100vw*227)/1440);
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.about-accordion-separator{
+    background-color: #D8D8D8;
+    height: 2px;
+    width: auto;
+}
+
+.about-underline{
+    background-color: #D8D8D8;
+    height: 2px;
+    width: auto;
+    margin: calc((100vw*120)/1440) calc((100vw*80)/1440) calc((100vw*95)/1440) calc((100vw*80)/1440);
+}
+
+.about-accordion-content-container{
+    height: 0;
+    margin: 0;
+    opacity: 0;
 }
