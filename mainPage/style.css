@@ -420,6 +420,10 @@
 .about-accordion-list-part {
     display: flex;
     flex-direction: column;
+    &:hover{
+        cursor: pointer;
+    }
+  
 }
 
 .about-accordion-heading-container {
@@ -441,6 +445,7 @@
     width: 24px;
     background-color: #B0B0B0;
     clip-path: polygon(0 48%, 48% 48%, 48% 0, 52% 0, 52% 48%, 100% 48%, 100% 52%, 52% 52%, 52% 100%, 48% 100%, 48% 52%, 0 52%);
+    transition-duration: 0.5s;
 }
 
 .about-accordion-content-container {
@@ -460,6 +465,7 @@
     width: calc((100vw*227)/1440);
     height: auto;
     margin-bottom: 30px;
+  
 }
 
 .about-accordion-separator{
@@ -476,7 +482,21 @@
 }
 
 .about-accordion-content-container{
+    transition-duration: 0.5s;
+    max-height: 0;
+   
+    height: auto;
+}
+
+.about-accordion-text-content{
     height: 0;
-    margin: 0;
+    transition-duration: 0.5s;
+    height: 0;
     opacity: 0;
+    z-index: -1;
+}
+
+.about-accordion-image-content{
+    transition-duration: 0.5s;
+    max-height: 0;
 }
