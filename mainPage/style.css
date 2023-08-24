@@ -1,3 +1,9 @@
+:root{
+    --layout-width: 1920;
+    --screen-width: 100vw;
+    --adapt-multiplier: calc(var(--screen-width)/var(--layout-width));
+}
+
 * {
     font-family: "Montserrat", sans-serif;
     font-size: 100%;
@@ -26,22 +32,22 @@
     grid-template-columns: 1fr 3fr;
     column-gap: 8px;
     width: auto;
-    margin: auto calc((100vw*80)/1440) auto calc((100vw*80)/1440);
+    margin: auto calc(200*var(--adapt-multiplier)) auto calc(200*var(--adapt-multiplier));
 }
 
 .logo-container {
-    height: calc((100vw*192)/1440);
-    width: calc((100vw*192)/1440);
+    height: calc(192*var(--adapt-multiplier));
+    width: calc(192*var(--adapt-multiplier));
 }
 
 .logo-img {
-    width: calc((100vw*192)/1440);
+    width: calc(192*var(--adapt-multiplier));
     height: auto;
 }
 
 .header-container {
-    margin-top: calc((100vw*65)/1440);
-    margin-bottom: calc((100vw*75)/1440);
+    margin-top: calc(65*var(--adapt-multiplier));
+    margin-bottom: calc(75*var(--adapt-multiplier));
 }
 
 .header-content-container {
@@ -57,7 +63,7 @@
 }
 
 .language-switcher-button {
-    font-size: 20px;
+    font-size: calc(20*var(--adapt-multiplier));
 }
 
 .language-button-ru {
@@ -76,7 +82,7 @@
 }
 
 .burger-button-line {
-    width: calc((100vw*61)/1440);
+    width: calc(61*var(--adapt-multiplier));
     border: 3px #000 solid;
     background-color: black;
 }
@@ -108,8 +114,8 @@
 
 .burger-menu-list {
     background-color: #1a1a1a;
-    margin-left: calc((100vw*56)/1440);
-    margin-top: calc((100vw*75)/1440);
+    margin-left: calc(56*var(--adapt-multiplier));
+    margin-top: calc(75*var(--adapt-multiplier));
     display: flex;
     flex-direction: column;
     gap: 80px;
@@ -118,7 +124,7 @@
 .burger-menu-link {
     color: #fff;
     background-color: #1a1a1a;
-    font-size: 96px;
+    font-size: calc(96*var(--adapt-multiplier));
     font-weight: 600;
     text-decoration: none;
     text-transform: uppercase;
@@ -159,8 +165,8 @@
 }
 
 .burger-logo-container {
-    width: calc((100vw*558)/1440);
-    height: calc((100vw*558)/1440);
+    width: calc(558*var(--adapt-multiplier));
+    height: calc(558*var(--adapt-multiplier));
 }
 
 .burger-logo-img {
@@ -180,7 +186,7 @@
     margin-right: 30px;
     align-self: flex-end;
     font-weight: 600;
-    font-size: 34px;
+    font-size: calc(34*var(--adapt-multiplier));
     color: #fff;
     text-transform: uppercase;
     background-color: #1a1a1a;
@@ -194,24 +200,24 @@
 
 .main-header {
     font-family: "Questrial", sans-serif;
-    font-size: 96px;
+    font-size: calc(96*var(--adapt-multiplier));
 }
 
 .pres-section {
-    margin-bottom: calc((100vw*95)/1440);
+    margin-bottom: calc(95*var(--adapt-multiplier));
 }
 
 .short-desc-and-slider {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-right: calc((100vw*40)/1440);
+    margin-right: calc(40*var(--adapt-multiplier));
     text-transform: uppercase;
     line-height: 34px;
 }
 
 .pres-short-description {
-    font-size: 20px;
+    font-size: calc(20*var(--adapt-multiplier));
     line-height: 34px;
 }
 
@@ -226,7 +232,7 @@
     flex-direction: row;
     list-style-type: none;
     justify-content: space-between;
-    font-size: 16px;
+    font-size: calc(16*var(--adapt-multiplier));
     color: #000;
 }
 
@@ -243,18 +249,25 @@
     background-color: #000;
 }
 
+.pres-img-container{
+    width: auto;
+    max-width: calc(954*var(--adapt-multiplier));
+}
+
 .pres-interrier {
-    width: 100%;
+    width: calc(954*var(--adapt-multiplier));
+    min-width: 0;
     height: auto;
 }
 
 .pres-description-container {
-    /* margin-top: calc((100vw*95)/1440); */
+    /* margin-top: calc((100vw*95)/var(--layout-width)); */
+    max-width: calc(954*var(--adapt-multiplier));
     margin-top: 95px;
 }
 
 .pres-slogan {
-    font-size: 20px;
+    font-size: calc(20*var(--adapt-multiplier));
     color: #838383;
     width: 100px;
     margin-bottom: 70px;
@@ -262,7 +275,7 @@
 }
 
 .pres-pre-description {
-    font-size: 25px;
+    font-size: calc(25*var(--adapt-multiplier));
     color: #000;
     text-transform: uppercase;
     font-weight: 600;
@@ -273,7 +286,7 @@
 
 .pres-description {
     line-height: 36px;
-    font-size: 20px;
+    font-size: calc(20*var(--adapt-multiplier));
     text-align: justify;
 
 }
@@ -284,12 +297,12 @@
 }
 
 .projects-container {
-    margin: auto calc((100vw*80)/1440) auto calc((100vw*80)/1440);
+    margin: auto calc(200*var(--adapt-multiplier)) auto calc(200*var(--adapt-multiplier));
 
 }
 
 .projects-header {
-    font-size: 24px;
+    font-size: calc(24*var(--adapt-multiplier));
     color: #D8D8D8;
     font-weight: 400;
     text-transform: uppercase;
@@ -313,11 +326,11 @@
 
 .residence-project-img {
     margin-top: 110px;
-    width: calc((100vw*520.5)/1440);
+    width: calc(520.5*var(--adapt-multiplier));
 }
 
 .villa-project-img {
-    width: calc((100vw*699.5)/1440);
+    width: calc(699.5*var(--adapt-multiplier));
 }
 
 .bottom-projects {
@@ -328,7 +341,7 @@
 
 .interrier-project-img {
     margin-top: 145px;
-    width: calc((100vw*609.5)/1440);
+    width: calc(609.5*var(--adapt-multiplier));
     margin-bottom: 104px;
 }
 
@@ -339,14 +352,14 @@
 }
 
 .landscape-project-img {
-    width: calc((100vw*548)/1440);
+    width: calc(548*var(--adapt-multiplier));
 }
 
 .all-projects-button {
     display: flex;
     flex-direction: column;
     color: #D8D8D8;
-    font-size: 24px;
+    font-size: calc(24*var(--adapt-multiplier));
     line-height: 35px;
     text-transform: uppercase;
     margin-bottom: 103px;
@@ -389,32 +402,32 @@
 
 .about-header {
     color: #838383;
-    font-size: 20px;
-    margin-top: calc((100vw*95)/1440);
+    font-size: calc(20*var(--adapt-multiplier));
+    margin-top: calc(95*var(--adapt-multiplier));
 }
 
 .about-pre-description {
-    font-size: 25px;
+    font-size: calc(25*var(--adapt-multiplier));
     text-transform: uppercase;
     color: #000;
     font-weight: 600;
-    margin-top: calc((100vw*70)/1440);
+    margin-top: calc(70*var(--adapt-multiplier));
 }
 
 .about-main-interrior {
-    width: calc((100vw*954)/1440);
+    width: calc(954*var(--adapt-multiplier));
     height: auto;
-    margin-top: calc((100vw*40)/1440);
+    margin-top: calc(40*var(--adapt-multiplier));
 }
 
 .about-description {
-    font-size: 24px;
+    font-size: calc(24*var(--adapt-multiplier));
     line-height: 36px;
     margin-top: 60px;
 }
 
 .about-accordion{
-    margin-top: calc((100vw*40)/1440);
+    margin-top: calc(40*var(--adapt-multiplier));
 }
 
 .about-accordion-list-part {
@@ -436,7 +449,7 @@
 
 .about-accordion-heading-text {
     color: #000;
-    font-size: 24px;
+    font-size: calc(24*var(--adapt-multiplier));
     text-transform: uppercase;
 }
 
@@ -457,12 +470,12 @@
 
 .about-accordion-text-content{
     color: #000;
-    font-size: 20px;
+    font-size: calc(20*var(--adapt-multiplier));
     line-height: 30px;
 }
 
 .about-accordion-image-content{
-    width: calc((100vw*227)/1440);
+    width: calc(227*var(--adapt-multiplier));
     height: auto;
     margin-bottom: 30px;
   
@@ -478,7 +491,7 @@
     background-color: #D8D8D8;
     height: 2px;
     width: auto;
-    margin: calc((100vw*120)/1440) calc((100vw*80)/1440) calc((100vw*95)/1440) calc((100vw*80)/1440);
+    margin: calc(120*var(--adapt-multiplier)) calc(80*var(--adapt-multiplier)) calc(95*var(--adapt-multiplier)) calc(80*var(--adapt-multiplier));
 }
 
 .about-accordion-content-container{
