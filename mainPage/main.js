@@ -58,11 +58,11 @@ function showAccordionPartContent(accordPart) {
     let accordPartContent = accordPart.querySelector('.about-accordion-content-container');
     let accordPartContentText = accordPart.querySelector('.about-accordion-text-content');
     let accordPartContentImg = accordPart.querySelector('.about-accordion-image-content');
-    accordPartContent.style.maxHeight = '200px';
+    accordPartContent.style.maxHeight = 'calc(200*var(--adapt-multiplier))';
     accordPartContentText.style.height = 'auto';
     accordPartContentText.style.opacity = '1';
-    accordPartContentImg.style.maxHeight = '200px';
-    accordPartContentText.style.height = '200px';
+    accordPartContentImg.style.maxHeight = 'calc(200*var(--adapt-multiplier))';
+    accordPartContentText.style.height = 'calc(200*var(--adapt-multiplier))';
 }
 
 function hideAccordionPartContent(accordPart) {
