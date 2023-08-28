@@ -253,13 +253,30 @@
 }
 
 .pres-img-container {
+ display: flex;
+ align-items: flex-start;
+ justify-content: flex-start;
     width: auto;
+    height: auto;
 }
 
-.pres-interrier {
-    width: 100%;
+.pres-interrier-slider-card {
+    width: calc(954*var(--adapt-multiplier));
     min-width: 0;
     height: auto;
+}
+
+.itcss{
+    margin: 0;
+    max-width: calc(954*var(--adapt-multiplier));
+}
+
+.itcss__wrapper{
+    background-color: #fff;
+}
+
+.itcss__indicator{
+   display: none; 
 }
 
 .pres-description-container {
@@ -585,5 +602,13 @@
     display: flex;
     flex-direction: row;
     font-size: calc(20*var(--adapt-multiplier));
+
+}
+
+@media screen and (max-width: 768px){
+    :root {
+    --layout-width: 140;
+    --margin-side: 40;
+}
 
 }

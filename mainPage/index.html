@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CUBE architects</title>
+    <link rel="stylesheet" href="../libraries/simple-adaptive-slider.css">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -74,7 +76,32 @@
                 </div>
             </div>
             <div class="pres-img-container">
-                <img class="pres-interrier" alt="interrier" src="../assets/pres.png">
+                <div class="itcss">
+                    <div class="itcss__wrapper">
+                      <div class="itcss__items">
+                        <div class="itcss__item">
+                            <img class="pres-interrier-slider-card" alt="interrier" src="../assets/pres.png">
+                        </div>
+                        <div class="itcss__item">
+                            <img class="pres-interrier-slider-card" alt="interrier" src="../assets/pres.png">
+                        </div>
+                        <div class="itcss__item">
+                            <img class="pres-interrier-slider-card" alt="interrier" src="../assets/pres.png">
+                        </div>
+                        <!-- <div class="itcss__item">
+                          <div class="pres-interrier-slider-card" style="height: auto; background: #607d8b;"></div>
+                        </div>
+                        <div class="itcss__item">
+                          <div class="pres-interrier-slider-card" style="height: 250px; background: #f44336;"></div>
+                        </div>
+                        <div class="itcss__item">
+                          <div class="pres-interrier-slider-card" style="height: 250px; background: #4caf50;"></div>
+                        </div> -->
+                      </div>
+                    </div>
+                  </div>
+
+
             </div>
             <div></div>
             <div class="pres-description-container">
@@ -236,6 +263,17 @@
     </footer>
 
     <script src="main.js"></script>
+    <script defer src="../libraries/simple-adaptive-slider.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // активация слайдера
+            new ItcSimpleSlider('.itcss', {
+                loop: true,
+                autoplay: true,
+                swipe: true
+            });
+        });
+    </script>
 </body>
 
 </html>
