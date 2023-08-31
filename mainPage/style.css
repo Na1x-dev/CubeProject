@@ -244,12 +244,15 @@
     height: 3px;
     background-color: #b0b0b0;
     align-self: center;
+    /* margin-left: calc(slide*20px); */
 }
+
 
 .pres-slider-indicator {
     width: calc(20*var(--adapt-multiplier));
     height: 3px;
     background-color: #000;
+    transition-duration: 0.2s;
 }
 
 .pres-img-container {
@@ -516,7 +519,6 @@
 .about-accordion-content-container {
     transition-duration: 0.5s;
     max-height: 0;
-
     height: auto;
 }
 

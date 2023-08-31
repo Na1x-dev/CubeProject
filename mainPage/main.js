@@ -4,6 +4,10 @@ let burgerMenu = document.querySelector(".burger-menu");
 let burgerCheckboxButton = document.querySelector(".burger-button");
 let curtain = document.querySelector(".curtain");
 let accordionClickAreas = document.getElementsByClassName("about-accordion-list-part");
+let sliderItems = document.getElementsByClassName("itcss__item");
+let sliderIndicator = document.querySelector(".pres-slider-indicator");
+let sliderIndicatorBody = document.querySelector(".pres-slider-body");
+
 
 //burger menu section start
 function switchBurgerMenu() {
@@ -47,7 +51,7 @@ function setClickToAccordionPart() {
     for (let accordPart of accordionClickAreas) {
         accordPart.addEventListener("mousedown", function () {
 
-    let accordPartContent = accordPart.querySelector('.about-accordion-content-container');
+            let accordPartContent = accordPart.querySelector('.about-accordion-content-container');
             console.log(window.getComputedStyle(accordPartContent).height);
             changeAccordionPartContent(accordPart);
         })
@@ -78,33 +82,57 @@ function hideAccordionPartContent(accordPart) {
 
 function changeAccordionPartContent(accordPart) {
     let accordPartContent = accordPart.querySelector('.about-accordion-content-container');
-    if(window.getComputedStyle(accordPartContent).height == '0px'){
+    if (window.getComputedStyle(accordPartContent).height == '0px') {
         showAccordionPartContent(accordPart);
         showMinusIcon(accordPart);
     }
-    else{
+    else {
         hideAccordionPartContent(accordPart);
         showPlusIcon(accordPart);
     }
 }
 
-function showPlusIcon(accordPart){
+function showPlusIcon(accordPart) {
     let accordPlusIcon = accordPart.querySelector('.about-accordion-heading-icon');
     accordPlusIcon.style.clipPath = 'polygon(0 48%, 48% 48%, 48% 0, 52% 0, 52% 48%, 100% 48%, 100% 52%, 52% 52%, 52% 100%, 48% 100%, 48% 52%, 0 52%)';
     accordPlusIcon.style.transform = 'rotate(0deg)';
 }
 
-function showMinusIcon(accordPart){
-let accordPlusIcon = accordPart.querySelector('.about-accordion-heading-icon');
-accordPlusIcon.style.clipPath = 'polygon(48% 0, 52% 0, 52% 100%, 48% 100%)';
-accordPlusIcon.style.transform = 'rotate(270deg)';
+function showMinusIcon(accordPart) {
+    let accordPlusIcon = accordPart.querySelector('.about-accordion-heading-icon');
+    accordPlusIcon.style.clipPath = 'polygon(48% 0, 52% 0, 52% 100%, 48% 100%)';
+    accordPlusIcon.style.transform = 'rotate(270deg)';
 }
 
 //accordion end
 
+//slider start
+
+function addSlider() {
+    document.addEventListener('DOMContentLoaded', () => {
+        // активация слайдера
+        slider = new ItcSimpleSlider('.itcss', {
+            loop: true,
+            autoplay: true,
+            swipe: true
+        });
+
+    });
+}
+
+function setSliderIndicatorSize(){
+    sliderIndicator.style.width = window.getComputedStyle(sliderIndicatorBody).width.slice(0, -2)/3 + "px";
+}
+
+    // slider.move();
+
+//slider end
+
 function main() {
     switchBurgerMenu();
     setClickToAccordionPart();
+    setSliderIndicatorSize();
+    addSlider();
 }
 
 main();
